@@ -1,0 +1,526 @@
+/* ========= reset.css (modern reset) ========= */
+
+/* 1) Предсказуемая модель размеров */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2) Сбрасываем отступы по умолчанию */
+* {
+    margin: 0;
+}
+
+/* 3) Проценты по высоте от html/body работают корректно */
+html,
+body {
+    height: 100%;
+}
+
+/* 4) Базовая типографика и рендеринг текста */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* 5) Медиа-элементы занимают ширину контейнера и не вылезают */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6) Формы наследуют шрифты от body */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* 7) Ссылки без синего по умолчанию (стилизуй позже) */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 8) Списки: маркеры только когда нужны */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+/* 9) Таблицы — без «дыр» */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 10) Фокус видимый и аккуратный (а не удалён вовсе) */
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid #0a84ff;
+    outline-offset: 2px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+}
+
+
+
+/* ---------- */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.nav {
+    margin-left: 350px;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 32px;
+
+}
+
+.logo img {
+    width: 220px;
+    height: 19px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0;
+    border-radius: 14px;
+    width: 155px;
+    /* по макету */
+    height: 46px;
+    margin-left: 31px;
+    /* зазор Меню → Кнопка */
+    background: #1b1a1a;
+    color: #fff;
+    font: 400 16px/24px "Poppins", sans-serif;
+    letter-spacing: .03em;
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+/* ---------------------------HERO SECTION----- */
+.container__hero {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #ece7e4;
+
+}
+
+.hero__inner {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.hero__media {
+    display: flex;
+}
+
+.hero__lable {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #645c55;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 70px;
+    max-width: 417px;
+    margin: 0 0 18px;
+
+}
+
+.hero__content {
+    flex: 1;
+    padding-left: 100px;
+    padding-top: 137px;
+    padding-bottom: 128px;
+}
+
+.hero__content__text {
+    width: 509px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #403e3b;
+    margin-bottom: 41px;
+}
+
+.hero__btn {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #1b1a1a;
+    margin-left: 25px;
+}
+
+.hero__media img {
+    object-fit: cover
+}
+
+/* ---------Firm Section----- */
+.firm {
+    padding: 100px 336px;
+}
+
+/*  .firm__inner {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.firm__title {
+    flex: 0 0 220px;
+    margin: 0;
+    margin-top: 0;
+}
+
+
+.firm__content p {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* интервалы между абзацами и подписью */
+/* max-width: 490px;
+}
+
+.firm__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.firm__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.firm__name {
+    font-weight: 600;
+    display: block;
+}
+
+.firm__role {
+    color: #645c55;
+    font-size: 14px;
+}  */
+
+
+
+.firm__inner {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    /* слева фикс, справа — резина */
+    column-gap: 48px;
+    /* зазор между колонками */
+    align-items: start;
+    /* верхние края в линию */
+}
+
+.firm__title {
+    color: #403e3b;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    margin: 0;
+    /* чтобы не съезжала базовая линия */
+}
+
+/* правая колонка — текстовый столбик */
+.firm__content {
+    font-size: 16px;
+    font-weight: 400;
+    color: #403e3b;
+    line-height: 24px;
+    /* элемент во 2-й колонке */
+    max-width: 490px;
+    /* длина строки ≈ 60–70ch */
+    display: grid;
+    row-gap: 10px;
+    /* интервалы между p и подписью */
+}
+
+.firm__author {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 24px;
+}
+
+.firm__avatar {
+    border: 3px solid #cec4bc;
+    border-radius: 64px;
+    width: 84px;
+    height: 84px;
+}
+
+.firm__name {
+    display: block;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    color: #1b1a1a;
+}
+
+.firm__role {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #645c55;
+}
+
+/* -------------reeding section------ */
+.container__reeding {
+
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+.reeding__figure {
+    /* контейнер для фото и подписи */
+    position: relative;
+    margin: 0;
+    /* у figure есть дефолтные отступы */
+}
+
+.reeding__figure>img {
+    /* само фото */
+    display: block;
+    width: 100%;
+    height: auto;
+
+    /* если нужна фикс. высота, то height + object-fit: cover */
+}
+
+/* Подпись как оверлей справа */
+.reeding__caption {
+    position: absolute;
+    right: 120px;
+    /* подстрой под твои поля контейнера */
+    top: 50%;
+    transform: translateY(-50%);
+    /* вертикально по центру области фото */
+    max-width: 285px;
+    /* ширина колонки с текстом */
+    text-align: left;
+}
+
+.reeding__eyebrow {
+
+    font-weight: 400;
+    font-size: 14px;
+
+    line-height: 20px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #403e3b;
+    margin: 0 0 8px;
+}
+
+.reeding__text {
+    max-width: 285px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #645c55;
+}
+
+/* -------section How we do what we do.------ */
+.container__process {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 136px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.process__header {
+    text-align: center;
+}
+
+.process__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.process__item img {
+    width: 117px;
+    height: 102px;
+    margin-bottom: 15px;
+}
+
+.process__eyebrow {
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #645c55;
+}
+
+.process__header {
+    margin-bottom: 47px;
+}
+
+#process-title {
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: center;
+    color: #1b1a1a;
+}
+
+.process__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #403e3b;
+}
+
+.process__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.process__text {
+    font-size: 16px;
+    font-weight: 400;
+    width: 300px;
+    text-align: center;
+    color: #645c55;
+
+}
+
+/* -----customers_ */
+.container__customer {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #3b3b3b;
+    color: #fff;
+    padding: 60px 136px;
+
+}
+
+.customers__inner {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customers__about {
+    width: 460px;
+}
+
+.customers__about span {
+    font-size: 14px;
+    line-height: 20px;
+    line-height: 143%;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ece7e4;
+}
+
+.customers__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    line-height: 119%;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+.customers__text {
+    font-size: 15px;
+    width: 451px;
+    line-height: 24px;
+    line-height: 160%;
+    color: #ece7e4;
+}
+
+/* логотипы: просто флекс-строка с переносом */
+.customers__icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* перенос на 2 ряд */
+    width: 520px;
+    /* чтобы получилось 2×2 */
+}
+
+/* 2 колонки: каждый li занимает 50% ширины */
+.customers__icons li {
+    width: 50%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.customers__icons img {
+    display: block;
+    max-width: 128px;
+    max-height: 78px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
